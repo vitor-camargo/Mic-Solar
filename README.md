@@ -30,3 +30,8 @@ Desenvolvedores
 - Letícia Dami
 - Frederico Wu
 - Vitor De Angeli Camargo
+
+###Histórico de mudanças
+
+MicSolar.ino
+- V 0.6 (upload 30/01/2017): upload inicial. Ajustado para funcionar com os componentes disponíveis no circuits.io

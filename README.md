@@ -31,9 +31,10 @@ Desenvolvedores
 - Frederico Wu
 - Vitor De Angeli Camargo
 
-###Histórico de mudanças
+###Histórico dos arquivos
 
 MicSolar.ino
+- 0.7 (upload 01/02/2017): código alterado de acordo com os LDRs do laboratório.
 - V 0.6 (upload 30/01/2017): upload inicial. Ajustado para funcionar com os componentes disponíveis no circuits.io
 
 Esquemático : http://www.schematics.com/project/micsolar-47252/

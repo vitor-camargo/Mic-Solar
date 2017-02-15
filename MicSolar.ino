@@ -17,10 +17,10 @@ int servoh = 90;
 Servo vertical;
 int servov = 90;
 
-int ldrES = A3;
-int ldrDS = A2;
-int ldrEI = A1;
-int ldrDI = A0;
+int ldrEI = A3;
+int ldrDI = A2;
+int ldrES = A1;
+int ldrDS = A0;
 
 int tolV = 0;
 int tolH = 0;
@@ -29,8 +29,8 @@ void setup() {
   
   Serial.begin(9600);
 
-  horizontal.attach(5); 
-  vertical.attach(6);
+  horizontal.attach(6); 
+  vertical.attach(5);
 }
 
 void loop() {
@@ -45,23 +45,23 @@ void loop() {
   int mI = (EI + DI) / 2;
   int mD = (DS + DI) / 2;
   int mE = (ES + EI) / 2;
-  
+ 
   
   int difV = mS - mI;
   int difH = mE - mD;
-    
+	
    //refinar tolerancia - deve ser pequena (LDRs não são lineares)
    // sleep ou outro comando pro arduino não gastar energia 
     
     if (mS < mI) { // 0 graus no superior e 180 graus no inferior
-    tolV=mI*0.05;
+    tolV=mI*0.05; // tolerancia escolhida baseda na variacao do cosseno de acordo com variacao de angulo
     difV=-difV;
       if (difV>tolV){  
     	servov = ++servov;
   
-      if (servov >= 180) {
+      if (servov >= 150) { // angulo selecionado para a plataforma nao inclinar demais e correr o risco de tombar
     
-    		servov = 180;
+    		servov = 150;
   
   		}
 
@@ -73,9 +73,9 @@ void loop() {
       if (difV>tolV)  {
   		servov = --servov;
       
-        if (servov <= 0) {
+        if (servov <= 30) {
           
-          servov = 0;
+          servov = 30;
       
       }
     }
@@ -90,9 +90,9 @@ void loop() {
      if (difH>tolH){
       servoh = ++servoh;
      
-      	if (servoh >= 180){
+      	if (servoh >= 140){ // angulos limitados pelos cabos e montagem da plataforma
     
-    		servoh = 180;
+    		servoh = 140;
         }
   	  }
 	}
@@ -102,9 +102,9 @@ void loop() {
   	if (difH>tolH){
   		servoh = --servoh;
       
-      if (servoh <= 0){
+      if (servoh <= 40){
           
-          servoh = 0;
+          servoh = 40;
       }
     }
 

@@ -38,19 +38,6 @@ MicSolar.ino
 - 0.7 (upload 01/02/2017): código alterado de acordo com os LDRs do laboratório.
 - V 0.6 (upload 30/01/2017): upload inicial. Ajustado para funcionar com os componentes disponíveis no circuits.io
 
-Esquemático : http://www.schematics.com/project/micsolar-47252/
-
-###Protótipos
-
-1
-2
-3
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/q-xrUBAfass" frameborder="0" allowfullscreen></iframe>
-
-
-
-
-
+Esquemático : http://www.schematics.com/project/micsolar2-47807/
 
 

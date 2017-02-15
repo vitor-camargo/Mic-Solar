@@ -34,6 +34,7 @@ Desenvolvedores
 ###Histórico dos arquivos
 
 MicSolar.ino
+- 1.0 (upload 15/02/2017): código alterado de acordo com a montagem finalizada da plataforma
 - 0.7 (upload 01/02/2017): código alterado de acordo com os LDRs do laboratório.
 - V 0.6 (upload 30/01/2017): upload inicial. Ajustado para funcionar com os componentes disponíveis no circuits.io
 
